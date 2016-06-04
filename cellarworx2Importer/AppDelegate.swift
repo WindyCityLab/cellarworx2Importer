@@ -6,8 +6,11 @@
 //  Copyright © 2016 Windy City Lab. All rights reserved.
 //
 
-import UIKit
+let kParseServerURL = "http://cellarworx2.com:1337/parse"
+let kParseAppID = "5CBBCE47-72CB-4C81-974F-2BE70B63FF1F"
 
+import UIKit
+import CellarworxKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,7 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = kParseAppID
+            $0.server = kParseServerURL
+        }
+        
+        Client.registerSubclass()
+        
+        Parse.initializeWithConfiguration(configuration)
         return true
     }
 
