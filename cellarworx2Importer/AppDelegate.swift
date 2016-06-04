@@ -10,7 +10,7 @@ let kParseServerURL = "http://cellarworx2.com:1337/parse"
 let kParseAppID = "5CBBCE47-72CB-4C81-974F-2BE70B63FF1F"
 
 import UIKit
-import CellarworxKit
+//import CellarworxKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
