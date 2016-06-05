@@ -73,6 +73,37 @@ extension User
         }
     }
     
+    class func addClientRelationships(complete : (success : Bool, error : NSError?) -> Void)
+    {
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            var clientDictionary : [Int : Client] = [:]
+            Client.getAll { (clients, error) in
+                for c in clients
+                {
+                    clientDictionary[c.clientid] = c
+                }
+                User.getAll({ (users, error) in
+                    for u in users
+                    {
+                        u.client = clientDictionary[u.clientid]!
+                        do {
+                            try PFUser.logInWithUsername(u.username!, password: "1234")
+                            try u.save()
+                            print("adding client relationship for \(u.username)")
+                            PFUser.logOut()
+                        }
+                        catch {
+                        }
+                    }
+                    dispatch_async(dispatch_get_main_queue(), {
+                        complete(success: true, error: nil)
+                    })
+                })
+            }
+        }
+    }
+    
     class func getAll(complete: (objects : [User], error : NSError?)-> Void)
     {
         getGenericAll(User()) { (objects, error) in

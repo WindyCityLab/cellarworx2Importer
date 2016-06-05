@@ -1,5 +1,5 @@
 import Foundation
-public class Lot: PFObject, PFSubclassing
+public class Lot: CellarworxClass, PFSubclassing
 {
     public static func parseClassName() -> String {
         return "Lots"

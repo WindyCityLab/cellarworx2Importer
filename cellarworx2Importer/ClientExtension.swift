@@ -28,7 +28,7 @@ extension Client
         return c
     }
     
-    class func buildClassFromFile(file : String, complete:(success : Bool, error : NSError?) -> Void)
+    override class func buildClassFromFile(file : String, complete:(success : Bool, error : NSError?) -> Void)
     {
         let bundle = NSBundle.mainBundle()
         let path = bundle.pathForResource(file, ofType: "json")
@@ -69,10 +69,11 @@ extension Client
             
         }
     }
-    
-    class func getAll(complete: (objects : [Client], error : NSError?)-> Void)
+    class func getAll(complete : (object : [Client], error : NSError?) -> Void)
     {
-        getGenericAll(Client()) { (objects, error) in
-            complete(objects: objects, error: error)
+        getAllGeneric(Client()) { (objects, error) in
+            complete(object: objects, error: error)
         }
-    }}
+    }
+
+}

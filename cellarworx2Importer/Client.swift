@@ -1,7 +1,7 @@
 import Foundation
-public class Client: CellarworxClass
+public class Client: CellarworxClass, PFSubclassing
 {
-    public override static func parseClassName() -> String {
+    public static func parseClassName() -> String {
         return "Client"
     }
 

@@ -8,9 +8,11 @@
 
 import Foundation
 
-public class CellarworxClass : PFObject, PFSubclassing
+public class CellarworxClass : PFObject
 {
-    public class func parseClassName() -> String {
-        return ""
+    class func buildClassFromFile(file : String, complete:(success : Bool, error : NSError?) -> Void)
+    {
+        print("this class must be overridden!")
     }
+    
 }

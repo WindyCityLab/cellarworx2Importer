@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1906324C1D044FCD002C8732 /* Lot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1906324B1D044FCD002C8732 /* Lot.swift */; };
 		1906324E1D04500C002C8732 /* LotExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1906324D1D04500C002C8732 /* LotExtension.swift */; };
-		190632501D0459B2002C8732 /* getAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1906324F1D0459B2002C8732 /* getAll.swift */; };
+		190632501D0459B2002C8732 /* CellarworxClassGenerics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1906324F1D0459B2002C8732 /* CellarworxClassGenerics.swift */; };
 		190632521D045E46002C8732 /* lots.json in Resources */ = {isa = PBXBuildFile; fileRef = 190632511D045E46002C8732 /* lots.json */; };
 		190632571D046538002C8732 /* CellarworxClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190632561D046538002C8732 /* CellarworxClass.swift */; };
 		198406471D036C100047A1A3 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 198406461D036C100047A1A3 /* users.json */; };
@@ -42,7 +42,7 @@
 /* Begin PBXFileReference section */
 		1906324B1D044FCD002C8732 /* Lot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lot.swift; sourceTree = "<group>"; };
 		1906324D1D04500C002C8732 /* LotExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotExtension.swift; sourceTree = "<group>"; };
-		1906324F1D0459B2002C8732 /* getAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getAll.swift; sourceTree = "<group>"; };
+		1906324F1D0459B2002C8732 /* CellarworxClassGenerics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellarworxClassGenerics.swift; sourceTree = "<group>"; };
 		190632511D045E46002C8732 /* lots.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lots.json; sourceTree = "<group>"; };
 		190632561D046538002C8732 /* CellarworxClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellarworxClass.swift; sourceTree = "<group>"; };
 		198406461D036C100047A1A3 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		190632541D045FF4002C8732 /* Generic Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				1906324F1D0459B2002C8732 /* getAll.swift */,
+				1906324F1D0459B2002C8732 /* CellarworxClassGenerics.swift */,
 			);
 			name = "Generic Helpers";
 			sourceTree = "<group>";
@@ -292,7 +292,7 @@
 				1906324C1D044FCD002C8732 /* Lot.swift in Sources */,
 				1984064F1D036EA40047A1A3 /* UserExtension.swift in Sources */,
 				1984064D1D036D5B0047A1A3 /* ClientExtension.swift in Sources */,
-				190632501D0459B2002C8732 /* getAll.swift in Sources */,
+				190632501D0459B2002C8732 /* CellarworxClassGenerics.swift in Sources */,
 				190632571D046538002C8732 /* CellarworxClass.swift in Sources */,
 				19E200D21D030A090082E477 /* AppDelegate.swift in Sources */,
 				19E203261D0365C30082E477 /* Client.swift in Sources */,

@@ -23,7 +23,7 @@ extension Lot
         return l
     }
     
-    class func buildClassFromFile(file : String, complete:(success : Bool, error : NSError?) -> Void)
+    override class func buildClassFromFile(file : String, complete:(success : Bool, error : NSError?) -> Void)
     {
         let bundle = NSBundle.mainBundle()
         let path = bundle.pathForResource(file, ofType: "json")
@@ -65,13 +65,6 @@ extension Lot
         }
     }
     
-    class func getAll(complete: (objects : [Lot], error : NSError?)-> Void)
-    {
-        getGenericAll(Lot()) { (objects, error) in
-            complete(objects: objects, error: error)
-        }
-    }
-    
     class func addClientRelationships(complete : (success : Bool, error : NSError?) -> Void)
     {
         var clientDictionary : [Int : Client] = [:]
@@ -80,7 +73,7 @@ extension Lot
             {
                 clientDictionary[c.clientid] = c
             }
-            Lot.getAll { (lots, error) in
+            Lot.getAll({ (lots, error) in
                 for l in lots
                 {
                     l.client = clientDictionary[l.clientcode]!
@@ -88,7 +81,15 @@ extension Lot
                 PFObject.saveAllInBackground(lots, block: { (success, error) in
                     complete(success: success , error: error)
                 })
-            }
+            })
         }
     }
+    
+    class func getAll(complete : (object : [Lot], error : NSError?) -> Void)
+    {
+        getAllGeneric(Lot()) { (objects, error) in
+            complete(object: objects, error: error)
+        }
+    }
+
 }
