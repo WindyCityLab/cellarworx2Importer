@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         Client.registerSubclass()
+        User.registerSubclass()
+        Lot.registerSubclass()
         
         Parse.initializeWithConfiguration(configuration)
         return true

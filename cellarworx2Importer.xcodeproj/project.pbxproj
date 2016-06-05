@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1906324C1D044FCD002C8732 /* Lot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1906324B1D044FCD002C8732 /* Lot.swift */; };
+		1906324E1D04500C002C8732 /* LotExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1906324D1D04500C002C8732 /* LotExtension.swift */; };
+		190632501D0459B2002C8732 /* getAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1906324F1D0459B2002C8732 /* getAll.swift */; };
+		190632521D045E46002C8732 /* lots.json in Resources */ = {isa = PBXBuildFile; fileRef = 190632511D045E46002C8732 /* lots.json */; };
+		190632571D046538002C8732 /* CellarworxClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190632561D046538002C8732 /* CellarworxClass.swift */; };
+		198406471D036C100047A1A3 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 198406461D036C100047A1A3 /* users.json */; };
+		198406491D036C4E0047A1A3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198406481D036C4E0047A1A3 /* User.swift */; };
+		1984064D1D036D5B0047A1A3 /* ClientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984064C1D036D5B0047A1A3 /* ClientExtension.swift */; };
+		1984064F1D036EA40047A1A3 /* UserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984064E1D036EA40047A1A3 /* UserExtension.swift */; };
 		19E200D21D030A090082E477 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E200D11D030A090082E477 /* AppDelegate.swift */; };
 		19E200D41D030A090082E477 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E200D31D030A090082E477 /* ViewController.swift */; };
 		19E200D71D030A090082E477 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E200D51D030A090082E477 /* Main.storyboard */; };
@@ -31,6 +40,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1906324B1D044FCD002C8732 /* Lot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lot.swift; sourceTree = "<group>"; };
+		1906324D1D04500C002C8732 /* LotExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotExtension.swift; sourceTree = "<group>"; };
+		1906324F1D0459B2002C8732 /* getAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getAll.swift; sourceTree = "<group>"; };
+		190632511D045E46002C8732 /* lots.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lots.json; sourceTree = "<group>"; };
+		190632561D046538002C8732 /* CellarworxClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellarworxClass.swift; sourceTree = "<group>"; };
+		198406461D036C100047A1A3 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		198406481D036C4E0047A1A3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1984064C1D036D5B0047A1A3 /* ClientExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientExtension.swift; sourceTree = "<group>"; };
+		1984064E1D036EA40047A1A3 /* UserExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserExtension.swift; sourceTree = "<group>"; };
 		19E200CE1D030A090082E477 /* cellarworx2Importer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cellarworx2Importer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E200D11D030A090082E477 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19E200D31D030A090082E477 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +76,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		190632531D045FEA002C8732 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19E203251D0365C30082E477 /* Client.swift */,
+				1984064C1D036D5B0047A1A3 /* ClientExtension.swift */,
+				1906324B1D044FCD002C8732 /* Lot.swift */,
+				1906324D1D04500C002C8732 /* LotExtension.swift */,
+				198406481D036C4E0047A1A3 /* User.swift */,
+				1984064E1D036EA40047A1A3 /* UserExtension.swift */,
+				190632561D046538002C8732 /* CellarworxClass.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		190632541D045FF4002C8732 /* Generic Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1906324F1D0459B2002C8732 /* getAll.swift */,
+			);
+			name = "Generic Helpers";
+			sourceTree = "<group>";
+		};
+		190632551D046004002C8732 /* JSON Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				19E202F91D0358CD0082E477 /* clients.json */,
+				198406461D036C100047A1A3 /* users.json */,
+				190632511D045E46002C8732 /* lots.json */,
+			);
+			name = "JSON Source Files";
+			sourceTree = "<group>";
+		};
 		19E200C51D030A090082E477 = {
 			isa = PBXGroup;
 			children = (
@@ -80,14 +130,15 @@
 		19E200D01D030A090082E477 /* cellarworx2Importer */ = {
 			isa = PBXGroup;
 			children = (
-				19E203251D0365C30082E477 /* Client.swift */,
+				190632541D045FF4002C8732 /* Generic Helpers */,
+				190632531D045FEA002C8732 /* Model */,
 				19E200D11D030A090082E477 /* AppDelegate.swift */,
 				19E200D31D030A090082E477 /* ViewController.swift */,
 				19E200D51D030A090082E477 /* Main.storyboard */,
 				19E200D81D030A090082E477 /* Assets.xcassets */,
 				19E200DA1D030A090082E477 /* LaunchScreen.storyboard */,
 				19E200DD1D030A090082E477 /* Info.plist */,
-				19E202F91D0358CD0082E477 /* clients.json */,
+				190632551D046004002C8732 /* JSON Source Files */,
 			);
 			path = cellarworx2Importer;
 			sourceTree = "<group>";
@@ -171,6 +222,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198406471D036C100047A1A3 /* users.json in Resources */,
+				190632521D045E46002C8732 /* lots.json in Resources */,
 				19E200DC1D030A090082E477 /* LaunchScreen.storyboard in Resources */,
 				19E200D91D030A090082E477 /* Assets.xcassets in Resources */,
 				19E202FA1D0358CD0082E477 /* clients.json in Resources */,
@@ -233,7 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198406491D036C4E0047A1A3 /* User.swift in Sources */,
+				1906324E1D04500C002C8732 /* LotExtension.swift in Sources */,
 				19E200D41D030A090082E477 /* ViewController.swift in Sources */,
+				1906324C1D044FCD002C8732 /* Lot.swift in Sources */,
+				1984064F1D036EA40047A1A3 /* UserExtension.swift in Sources */,
+				1984064D1D036D5B0047A1A3 /* ClientExtension.swift in Sources */,
+				190632501D0459B2002C8732 /* getAll.swift in Sources */,
+				190632571D046538002C8732 /* CellarworxClass.swift in Sources */,
 				19E200D21D030A090082E477 /* AppDelegate.swift in Sources */,
 				19E203261D0365C30082E477 /* Client.swift in Sources */,
 			);

@@ -13,45 +13,49 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let bundle = NSBundle.mainBundle()
-        let path = bundle.pathForResource("clients", ofType: "json")
-        do {
-            let content = try String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
-            let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-            do {
-                let result : [String: AnyObject] = try NSJSONSerialization.JSONObjectWithData(data!, options : NSJSONReadingOptions.MutableContainers) as! [String: AnyObject]
-                let values = result["RECORDS"] as! [[String : AnyObject]]
-                let q = Client.query()
-                q?.findObjectsInBackgroundWithBlock({ (objects, error) in
-                    PFObject.deleteAllInBackground(objects, block: { (result, error) in
-                        var clients : [Client] = Array()
-                        for client in values
-                        {
-                           let c = Client()
-                            c.clientname = client["CLIENTNAME"] as! String
-                            c.code = client["CODE"] as! String
-                            clients.append(c)
-                        }
-                        PFObject.saveAllInBackground(clients, block: { (result, error) in
-                            if result
-                            {
-                                print("hooray client worked")
-                            }
-                            else
-                            {
-                                print(error?.localizedDescription)
-                            }
-                        })
-                    })
-                })
-            }
-            catch {
-                
-            }
+        Lot.addClientRelationships { (success, error) in
+            print ("relationships added")
         }
-        catch {
-            
-        }
+//        Lot.buildClassFromFile("lots") { (success, error) in
+//            Lot.getAll({ (objects, error) in
+//                print("Retrieved all lots, total count: \(objects.count)")
+//            })
+//        }
+//        Client.buildClassFromFile("clients") { (success, error) in
+//            User.buildClassFromFile("users", complete: { (success, error) in
+//                var clients : [Client] = Array()
+//                var users : [User] = Array()
+//                Client.getAll({ (objects, error) in
+//                    clients = objects
+//                    User.getAll({ (objects, error) in
+//                        users = objects
+//                        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+//                        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+//                            for user in users
+//                            {
+//                                print (user.username)
+//                                for client in clients
+//                                {
+//                                    if client.clientid == user.clientid
+//                                    {
+//                                        print ("match found")
+//                                        user.client = client
+//                                        do {
+//                                            try PFUser.logInWithUsername(user.username!, password: "1234")
+//                                            try user.save()
+//                                            PFUser.logOut()
+//                                        }
+//                                        catch {
+//                                        }
+//                                        break
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    })
+//                })
+//            })
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,5 +64,19 @@ class ViewController: UIViewController {
     }
 
 
+}
+extension String
+{
+    func checkForBool() -> Bool
+    {
+        if self == "YES"
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
 }
 
