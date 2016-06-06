@@ -33,18 +33,4 @@ class ViewController: UIViewController {
 
 
 }
-extension String
-{
-    func checkForBool() -> Bool
-    {
-        if self == "YES"
-        {
-            return true
-        }
-        else
-        {
-            return false
-        }
-    }
-}
 

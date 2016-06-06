@@ -12,6 +12,10 @@
 		190632501D0459B2002C8732 /* CellarworxClassGenerics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1906324F1D0459B2002C8732 /* CellarworxClassGenerics.swift */; };
 		190632521D045E46002C8732 /* lots.json in Resources */ = {isa = PBXBuildFile; fileRef = 190632511D045E46002C8732 /* lots.json */; };
 		190632571D046538002C8732 /* CellarworxClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190632561D046538002C8732 /* CellarworxClass.swift */; };
+		190632591D04DBD1002C8732 /* WorkOrders.json in Resources */ = {isa = PBXBuildFile; fileRef = 190632581D04DBD1002C8732 /* WorkOrders.json */; };
+		1906325B1D04DC2B002C8732 /* Wo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1906325A1D04DC2B002C8732 /* Wo.swift */; };
+		1906325D1D04DC8B002C8732 /* WoExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1906325C1D04DC8B002C8732 /* WoExtension.swift */; };
+		1906325F1D0598E4002C8732 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1906325E1D0598E4002C8732 /* StringExtension.swift */; };
 		198406471D036C100047A1A3 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 198406461D036C100047A1A3 /* users.json */; };
 		198406491D036C4E0047A1A3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198406481D036C4E0047A1A3 /* User.swift */; };
 		1984064D1D036D5B0047A1A3 /* ClientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984064C1D036D5B0047A1A3 /* ClientExtension.swift */; };
@@ -45,6 +49,10 @@
 		1906324F1D0459B2002C8732 /* CellarworxClassGenerics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellarworxClassGenerics.swift; sourceTree = "<group>"; };
 		190632511D045E46002C8732 /* lots.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lots.json; sourceTree = "<group>"; };
 		190632561D046538002C8732 /* CellarworxClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellarworxClass.swift; sourceTree = "<group>"; };
+		190632581D04DBD1002C8732 /* WorkOrders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WorkOrders.json; sourceTree = "<group>"; };
+		1906325A1D04DC2B002C8732 /* Wo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wo.swift; sourceTree = "<group>"; };
+		1906325C1D04DC8B002C8732 /* WoExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoExtension.swift; sourceTree = "<group>"; };
+		1906325E1D0598E4002C8732 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		198406461D036C100047A1A3 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		198406481D036C4E0047A1A3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1984064C1D036D5B0047A1A3 /* ClientExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientExtension.swift; sourceTree = "<group>"; };
@@ -79,6 +87,8 @@
 		190632531D045FEA002C8732 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1906325A1D04DC2B002C8732 /* Wo.swift */,
+				1906325C1D04DC8B002C8732 /* WoExtension.swift */,
 				19E203251D0365C30082E477 /* Client.swift */,
 				1984064C1D036D5B0047A1A3 /* ClientExtension.swift */,
 				1906324B1D044FCD002C8732 /* Lot.swift */,
@@ -86,6 +96,7 @@
 				198406481D036C4E0047A1A3 /* User.swift */,
 				1984064E1D036EA40047A1A3 /* UserExtension.swift */,
 				190632561D046538002C8732 /* CellarworxClass.swift */,
+				1906325E1D0598E4002C8732 /* StringExtension.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -101,6 +112,7 @@
 		190632551D046004002C8732 /* JSON Source Files */ = {
 			isa = PBXGroup;
 			children = (
+				190632581D04DBD1002C8732 /* WorkOrders.json */,
 				19E202F91D0358CD0082E477 /* clients.json */,
 				198406461D036C100047A1A3 /* users.json */,
 				190632511D045E46002C8732 /* lots.json */,
@@ -222,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				190632591D04DBD1002C8732 /* WorkOrders.json in Resources */,
 				198406471D036C100047A1A3 /* users.json in Resources */,
 				190632521D045E46002C8732 /* lots.json in Resources */,
 				19E200DC1D030A090082E477 /* LaunchScreen.storyboard in Resources */,
@@ -287,14 +300,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				198406491D036C4E0047A1A3 /* User.swift in Sources */,
+				1906325B1D04DC2B002C8732 /* Wo.swift in Sources */,
 				1906324E1D04500C002C8732 /* LotExtension.swift in Sources */,
 				19E200D41D030A090082E477 /* ViewController.swift in Sources */,
 				1906324C1D044FCD002C8732 /* Lot.swift in Sources */,
 				1984064F1D036EA40047A1A3 /* UserExtension.swift in Sources */,
 				1984064D1D036D5B0047A1A3 /* ClientExtension.swift in Sources */,
+				1906325D1D04DC8B002C8732 /* WoExtension.swift in Sources */,
 				190632501D0459B2002C8732 /* CellarworxClassGenerics.swift in Sources */,
 				190632571D046538002C8732 /* CellarworxClass.swift in Sources */,
 				19E200D21D030A090082E477 /* AppDelegate.swift in Sources */,
+				1906325F1D0598E4002C8732 /* StringExtension.swift in Sources */,
 				19E203261D0365C30082E477 /* Client.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
