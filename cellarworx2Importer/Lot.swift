@@ -2,7 +2,7 @@ import Foundation
 public class Lot: CellarworxClass, PFSubclassing
 {
     public static func parseClassName() -> String {
-        return "Lots"
+        return "Lot"
     }
 
     //  Strings 
