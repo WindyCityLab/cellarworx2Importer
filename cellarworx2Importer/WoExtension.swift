@@ -33,6 +33,21 @@ extension Wo
                     w.lotNumber = item["LOT"] as! String
                     w.lot = lotDictionary[w.lotNumber]!
                     w.vesseltype = vesseltypeEnum(rawValue: (item["VESSELTYPE"] as! String).underbar())!
+                    w.vesselid = item["VESSELID"] as! String
+                    w.timeslot = timeslotEnum(rawValue: (item["TIMESLOT"] as! String).underbar())!
+                    w.duration = Int(item["DURATION"] as! String)!
+                    w.strength = strengthEnum(rawValue: (item["STRENGTH"] as! String).underbar())!
+                    w.status = statusEnum(rawValue: (item["STATUS"] as! String).underbar())!
+                    w.completionDate = dateFormatter.dateFromString(item["COMPLETIONDATE"] as! String)!
+                    w.completeBy = dateFormatter.dateFromString(item["COMPLETEBY"] as! String)!
+                    w.assignedto = item["ASSIGNEDTO"] as! String
+                    w.deleted = (item["DELETED"] as! String).checkForBool()
+                    
+                    w.additionid = Int(item["ADDITIONID"] as! String)!
+                    
+                    // add relationship here
+                    
+                    
                     allWo.append(w)
                     if count >= 100
                     {

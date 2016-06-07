@@ -70,6 +70,8 @@ public class Wo: PFObject, PFSubclassing
 
     // DateTime
     @NSManaged public var dueDate : NSDate
+    @NSManaged public var completionDate : NSDate?
+    @NSManaged public var completeBy : NSDate?
     
     //  Strings 
     @NSManaged public var alert : String

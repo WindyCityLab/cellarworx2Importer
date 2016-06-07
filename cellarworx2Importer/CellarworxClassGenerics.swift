@@ -8,6 +8,11 @@
 
 import Foundation
 
+func makeEnum<T: RawRepresentable where T.RawValue == String>(item : T, name : AnyObject) -> T
+{
+    return T(rawValue: (name as! String).underbar())!
+}
+
 func deleteGenericAll<T:PFObject>(item : T, complete: (success : Bool, error : NSError?)-> Void)
 {
     var allItems : [T] = Array()

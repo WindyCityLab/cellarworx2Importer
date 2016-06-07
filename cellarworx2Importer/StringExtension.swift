@@ -10,7 +10,7 @@ extension String
 {
     func checkForBool() -> Bool
     {
-        if self == "YES"
+        if self == "YES" || self == "1"
         {
             return true
         }
